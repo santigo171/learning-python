@@ -16,17 +16,18 @@ Hecho por David Hurtado
     7 - Pesos chilenos     --> DOLARES
     8 - Reales brasileños  --> DOLARES
 
+    0 - Salir del menú
+
 Elige una opción: """
 
-option = int(input(menu))
+option = float(input(menu))
 
 print("")
 
 
 def conversion(currency_name, dollar_value):
-    bagde = input("Cuantos " + BLUE + currency_name +
-                  RESET + " tienes?: " + BLUE)
-    bagde = float(bagde)
+    bagde = float(input("Cuantos " + BLUE + currency_name +
+                        RESET + " tienes?: " + BLUE))
     dollars = bagde / dollar_value
     dollars = round(dollars, 2)
     bagde = str(bagde)
@@ -60,5 +61,9 @@ elif option == 7:
 elif option == 8:
     conversion("reales brasileños", 5.22)
 
+elif option == 0:
+    print("A bueno adiós master.")
+
 else:
-    print("Por favor ingresa una opción correcta (Pon solo el número). ")
+    print("Por favor ingresa " + BLUE + "una opción correcta" +
+          RESET + " (Pon solo el número). ")
