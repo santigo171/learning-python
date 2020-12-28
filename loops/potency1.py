@@ -1,3 +1,5 @@
+# no loop
+
 def run(number, limit, potency):
     result = number ** potency
     if result <= limit:
